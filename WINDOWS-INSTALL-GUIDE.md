@@ -2,7 +2,7 @@
 
 ## Easiest method — create the installer using GitHub Actions
 
-This method does not require Node.js on your laptop and does not require any API key or environment variable.
+This method does not require Node.js on your laptop and does not require a GitHub PAT or environment variable for publishing. The workflow builds the installer and uploads it as an Actions artifact; it does not publish a GitHub Release.
 
 1. Create a GitHub repository and upload the **contents** of this `QUIZINOX` folder to the repository's root.
 2. Open the repository's **Actions** tab.

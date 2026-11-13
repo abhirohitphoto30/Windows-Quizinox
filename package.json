@@ -12,8 +12,8 @@
     "android:icons": "python3 scripts/generate_android_icons.py",
     "desktop:dev": "vite --host 127.0.0.1",
     "desktop:run": "npm run build && electron .",
-    "desktop:dist": "npm run build && electron-builder --win nsis",
-    "desktop:portable": "npm run build && electron-builder --win portable"
+    "desktop:dist": "npm run build && electron-builder --win nsis --publish never",
+    "desktop:portable": "npm run build && electron-builder --win portable --publish never"
   },
   "dependencies": {
     "@capacitor/android": "^7.4.3",

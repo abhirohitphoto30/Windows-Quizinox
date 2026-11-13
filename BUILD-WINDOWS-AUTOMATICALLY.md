@@ -4,7 +4,7 @@
 2. Install **Git for Windows** and **Python 3.9+** if they are not already installed.
 3. Open the extracted `QUIZINOX` folder and double-click `RUN-WINDOWS-BUILD.bat` (or run `python BUILD-WINDOWS-VIA-GITHUB.py`).
 4. Enter your GitHub username and a Personal Access Token when asked. The token input is hidden and the script does not save it.
-5. The script creates a private GitHub repository by default, pushes the project, waits for GitHub Actions to build the Windows installer, downloads the `.exe`, and creates `QUIZINOX_v2.3_Windows_Complete.zip` one folder above the project.
+5. The script creates a private GitHub repository by default, pushes the project, waits for GitHub Actions to build the Windows installer (without attempting GitHub Release publishing), downloads the `.exe`, and creates `QUIZINOX_v2.3_Windows_Complete.zip` one folder above the project.
 
 ## GitHub token permissions
 
