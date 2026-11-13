@@ -1,0 +1,28 @@
+name: Build QUIZINOX Windows Installer
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "src/**"
+      - "public/**"
+      - "electron/**"
+      - "package.json"
+      - "vite.config.js"
+      - ".github/workflows/build-windows-installer.yml"
+
+jobs:
+  build-windows:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm install
+      - run: npm run desktop:dist
+      - uses: actions/upload-artifact@v4
+        with:
+          name: QUIZINOX-Windows-Installer
+          path: release/*.exe
+          if-no-files-found: error
